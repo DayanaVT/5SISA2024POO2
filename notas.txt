@@ -1,0 +1,21 @@
+ESTO Es UNA NOTA DE qUE DEBEN DE HACER LA PRIMERA VEZ QUE ESTEN OCUPANDO 
+git hub 
+
+GIT INIT 
+INICILIZA EL REPOSITORIO
+
+GIT ADD NombreArchivo 
+
+sirve para guardr cambios de todos los archivos en el repositorio
+
+git add .
+
+
+git status
+
+sirve para visualizar el edo del repositorio
+
+cuando sea a primera vez que van a cofigurar el repositorio se usan
+
+git config --global user.name "nombre de usuario"
+git config n--global uer.email "email
