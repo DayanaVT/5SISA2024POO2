@@ -31,7 +31,7 @@ public class Consultar extends HttpServlet {
      @Override
        public void init(ServletConfig scg) throws ServletException{
         //sirve para configurar el servicio de la conexion con la bd
-        String url = "jdbc:mysql:3306//localhost/registroalumnos";
+        String url = "jdbc:mysql://localhost/registroalumnos";
                     //controlador:motorbd:puerto//IP/nombrebd
         String username = "root";
         String password = "pato2101";
@@ -61,12 +61,12 @@ public class Consultar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Consultor</title>");            
+            out.println("<title>Servlet Consultar</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Listado de alumnos registrados</h1>"
-                    +"<br>"
-                    +"<table border = '2'>"
+            out.println("<h1>Listadi de alumnos registrados</h1>"
+                    + "<br>"
+                    + "<table border = '2'>"
                     + "<tr>"
                     + "<th>Boleta</th>"
                     + "<th>Nombre Completo</th>"
@@ -76,14 +76,14 @@ public class Consultar extends HttpServlet {
                 int id, edad;
                 String nom, appat, apmat;
                 
-                String q = "select *from registro";
+                String q = "select * from alumno";
                 
                 set = con.createStatement();
                 rs = set.executeQuery(q);
                 
-               while(rs.next()){
+                while(rs.next()){
                     //obtener cada dato
-                    id = rs.getInt("id_alu");
+                    id = rs.getInt("idAlumno");
                     nom = rs.getString("nom_alu");
                     appat = rs.getString("appat_alu");
                     apmat = rs.getString("apmat_alu");
@@ -106,7 +106,6 @@ public class Consultar extends HttpServlet {
             out.println("</html>");
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

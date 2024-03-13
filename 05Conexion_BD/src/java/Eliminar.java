@@ -30,9 +30,10 @@ public class Eliminar extends HttpServlet {
     // por ejemplo crear una tabla, registrar un dato actualizar un dato, modificar la estructura de un atributo
     private ResultSet rs;
     //este objeto es exclusivo de consultas
+    @Override
        public void init(ServletConfig scg) throws ServletException{
         //sirve para configurar el servicio de la conexion con la bd
-        String url = "jdbc:mysql:3306//localhost/registroalumnos";
+        String url = "jdbc:mysql://localhost/registroalumnos";
                     //controlador:motorbd:puerto//IP/nombrebd
         String username = "root";
         String password = "pato2101";
@@ -53,7 +54,7 @@ public class Eliminar extends HttpServlet {
         }
         
     }
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+        protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -64,14 +65,13 @@ public class Eliminar extends HttpServlet {
             out.println("<title>Servlet Eliminar</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Eliminar at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            
+
     try{
                 int bol;
                 bol = Integer.parseInt(request.getParameter("boletaeliminada"));
                 System.out.println(bol);
-                String q = "delete from alumno where id_alu="+bol;
+                String q = "delete from alumno where idAlumno="+bol;
                 
                 set.executeUpdate(q);
                 out.println("<h1>Registro Eliminado</h1>");

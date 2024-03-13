@@ -30,9 +30,10 @@ public class Actualizar extends HttpServlet {
     // por ejemplo crear una tabla, registrar un dato actualizar un dato, modificar la estructura de un atributo
     private ResultSet rs;
     //este objeto es exclusivo de consultas
+ @Override
        public void init(ServletConfig scg) throws ServletException{
         //sirve para configurar el servicio de la conexion con la bd
-        String url = "jdbc:mysql:3306//localhost/registroalumnos";
+        String url = "jdbc:mysql://localhost/registroalumnos";
                     //controlador:motorbd:puerto//IP/nombrebd
         String username = "root";
         String password = "pato2101";

@@ -54,7 +54,7 @@ public class Registro extends HttpServlet {
     @Override
     public void init(ServletConfig scg) throws ServletException{
         //sirve para configurar el servicio de la conexion con la bd
-        String url = "jdbc:mysql:3306//localhost/registroalumnos";
+        String url = "jdbc:mysql://localhost/registroalumnos";
                     //controlador:motorbd:puerto//IP/nombrebd
         String username = "root";
         String password = "pato2101";
