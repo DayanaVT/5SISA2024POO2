@@ -16,6 +16,8 @@
     </head>
     <body>
         <h1>Lista General de Alumnos a presentar Extraordinarios</h1>
+        <br><br>
+        <a href="registro.jsp" >Registrar Alumno a Extraordinario</a>
         <div class="container" >
             <br>
             <table border="2" >
@@ -51,12 +53,10 @@
                     </tr>    
                         
                     
-                    <%
-                        }
-                        %>
+                    <%}%>
                 </tbody>
             </table>
                 <a href="index.html" >Regresar al Menu Principal</a>    
         </div>
     </body>
-</html>
+</html> 
